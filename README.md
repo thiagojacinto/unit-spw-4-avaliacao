@@ -2,9 +2,9 @@
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here ---> 
 
-![GitHub contributors](https://img.shields.io/github/contributors/alvesmog/unit-spw-4-avaliacao/README.md)
-![GitHub stars](https://img.shields.io/github/stars/alvesmog/README.md?style=social)
-![GitHub forks](https://img.shields.io/github/forks/alvesmog/README.md?style=social)
+![GitHub contributors](https://img.shields.io/github/contributors/alvesmog/unit-spw-4-avaliacao)
+![GitHub stars](https://img.shields.io/github/stars/alvesmog/unit-spw-4-avaliacao?style=social)
+![GitHub forks](https://img.shields.io/github/forks/alvesmog/unit-spw-4-avaliacao?style=social)
 
 Esse é o repositório do projeto final do Módulo 4 da Pós-graduaçaão 'Software Programming for Work', da Unit / Porto Digital. No projeto é utilizado o conceito de `PILHA` em conjunto com o método de ordenação `BUBBLE SORT`.
 
