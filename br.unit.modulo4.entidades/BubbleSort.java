@@ -1,20 +1,31 @@
 package br.unit.modulo4.entidades;
 
+
+
 public class BubbleSort {
-	// ATRIBUTOS
+	// ATTRIBUTES
 	private int[] vector;
+	private String[] vectorOfStrings;
 	private int mudancas = 0;
 
-	// CONSTRUCTOR
+	// CONSTRUCTORES
+	
+	// Constructor para INT
 	public BubbleSort(int[] vector) {
 		// TODO Auto-generated constructor stub
 		this.vector = vector;
 	}
+	
+	// COnstructor para STRING
+	public BubbleSort(String[] vectorOfStrings) {
+		// TODO Auto-generated constructor stub
+		this.vectorOfStrings = vectorOfStrings;
+	}
 
 	/*
-	 * Algoritimo de ordenação
+	 * Algoritimo de ordenação para inteiros
 	 */
-	public void ordenar() {
+	public void ordenarINT() {
 		for (int i = 0; i < vector.length; i++) {
 			for (int j = 1; j < vector.length; j++) {
 
@@ -27,21 +38,57 @@ public class BubbleSort {
 					aux = v1;
 					v1 = v2;
 					v2 = aux;
-					// após a mudança, mudar valores nos vetores nas posições corretas
+					// then put them inside 'vector'
 					vector[j-1] = v1;
 					vector[j] = v2;
-					// conta uma mudança
+					// add one change
+					mudancas++;
+				}
+			}
+		}
+	}
+	
+	/*
+	 * Algoritimo de ordenação para Strings - Pela primeira letra
+	 */
+	public void ordenarString() {
+		for (int i = 0; i < vectorOfStrings.length; i++) {
+			for (int j = 1; j < vectorOfStrings.length; j++) {
+
+				String v1 = vectorOfStrings[j-1];
+				String v2 = vectorOfStrings[j];
+				String aux;
+				// Verificação: A PRIMEIRA LETRA da String anterior é maior que o atual?
+				if (v1.charAt(0) > v2.charAt(0)) {
+					// Mudança de valores
+					aux = v1;
+					v1 = v2;
+					v2 = aux;
+					// then put them inside 'vector'
+					vectorOfStrings[j-1] = v1;
+					vectorOfStrings[j] = v2;
+					// add one change
 					mudancas++;
 				}
 			}
 		}
 	}
 
-	public String exibirVetor() {
+	public String exibirVetorINT() {
 		String vectorString = "[";
 		for (int i = 0; i < vector.length; i++) {
-			// System.out.println(vector[i]);
+			//			System.out.println(vector[i]);
 			vectorString += " " + vector[i];
+		}
+		vectorString += " ]";
+		return vectorString;
+	}
+	
+	public String exibirVetorSTRING() {
+		String vectorString = "[";
+		for (int i = 0; i < vectorOfStrings.length; i++) {
+			//			System.out.println(vector[i]);
+			vectorString += " " + vectorOfStrings[i];
 		}
 		vectorString += " ]";
 		return vectorString;
@@ -51,6 +98,10 @@ public class BubbleSort {
 
 	public int[] getVector() {
 		return vector;
+	}
+	
+	public String[] getVectorOfStrings() {
+		return vectorOfStrings;
 	}
 
 	public int getMudancas() {
