@@ -1,7 +1,7 @@
 package br.unit.modulo4.entidades;
 
 public class BubbleSort {
-	// ATTRIBUTES
+	// ATRIBUTOS
 	private int[] vector;
 	private int mudancas = 0;
 
@@ -27,10 +27,10 @@ public class BubbleSort {
 					aux = v1;
 					v1 = v2;
 					v2 = aux;
-					// then put them inside 'vector'
+					// após a mudança, mudar valores nos vetores nas posições corretas
 					vector[j-1] = v1;
 					vector[j] = v2;
-					// add one change
+					// conta uma mudança
 					mudancas++;
 				}
 			}
@@ -40,7 +40,7 @@ public class BubbleSort {
 	public String exibirVetor() {
 		String vectorString = "[";
 		for (int i = 0; i < vector.length; i++) {
-			//			System.out.println(vector[i]);
+			// System.out.println(vector[i]);
 			vectorString += " " + vector[i];
 		}
 		vectorString += " ]";
