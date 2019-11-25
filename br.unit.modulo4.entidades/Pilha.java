@@ -98,14 +98,20 @@ public class Pilha {
 	 *  	Exibir o vetor
 	 */
 	
-	public String exibirVector() {
-		String vectorString = "[";
+	public StringBuffer exibirVector() {
+		
+		StringBuffer stringBuffer = new StringBuffer();
+
+		stringBuffer.append("[");
+
 		for (int i = 0; i < vector.length; i++) {
-			//			System.out.println(vector[i]);
-			vectorString += " " + vector[i];
+			stringBuffer.append(vector[i]+", ");
 		}
-		vectorString += " ]";
-		return vectorString;
+
+		stringBuffer.delete(stringBuffer.length()-2, stringBuffer.length());
+		stringBuffer.append("]");
+
+		return stringBuffer;
 	}
 
 	// GETTERS e SETTERS
