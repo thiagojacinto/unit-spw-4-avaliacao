@@ -47,8 +47,8 @@ public class Pilha {
 		// Verifica se existe ao menos um elemento na pilha (i.e. topo > -1) 
 		if (topo > -1) {
 			// Elimina o valor (colando "vazio") associado aquela posição.
-			//		obs: "vazio" foi escolhido pois 'v' está abaixo das letras maiusculas na tabela ASCII
-			vector[topo] = "vazio";
+			//		obs: "·vazio" foi escolhido pois '·' está na posição 250 da tabela ASCII
+			vector[topo] = "·vazio";
 			// Reduz o topo a posição anterior
 			topo--;
 		} else {
