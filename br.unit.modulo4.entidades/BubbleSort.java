@@ -1,7 +1,5 @@
 package br.unit.modulo4.entidades;
 
-
-
 public class BubbleSort {
 	// ATTRIBUTES
 	private int[] vector;
