@@ -23,7 +23,7 @@ public class BubbleSort {
 	}
 
 	/*
-	 * Algoritimo de ordenação para inteiros
+	 * Algoritmo de ordenação para inteiros
 	 */
 	public void ordenarINT() {
 		for (int i = 0; i < vector.length; i++) {
@@ -84,14 +84,20 @@ public class BubbleSort {
 		return vectorString;
 	}
 	
-	public String exibirVetorSTRING() {
-		String vectorString = "[";
+	public StringBuffer exibirVetorSTRING() {
+		
+		StringBuffer s = new StringBuffer();
+		
+		s.append("[");
+
 		for (int i = 0; i < vectorOfStrings.length; i++) {
-			//			System.out.println(vector[i]);
-			vectorString += " " + vectorOfStrings[i];
+			s.append(vectorOfStrings[i]+", ");
 		}
-		vectorString += " ]";
-		return vectorString;
+		
+		s.delete(s.length()-2, s.length());
+		s.append("]");
+
+		return s;
 	}
 
 	// Getters and Setters
